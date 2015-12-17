@@ -1,0 +1,82 @@
+--------------------------------------------------------------------
+
+This README file explains the prototype program of the thesis,
+``Trajectory-based Stereoscopic Video Stabilization.''
+Author: Chun-Wei Liu
+Email : dreamway@cmlab.csie.ntu.edu.tw
+Date  : 2010/08/20
+
+--------------------------------------------------------------------
+
+Outline:
+  Introduction
+  Demo
+  Program description
+
+Introduction: --
+The programs, including two parts, were separated into two folders.
+``Feature trajectory-based stereoscopic video stabilization'' in 2d/;
+``Camera trajectory-based stereoscopic video stabilization'' in 3d/.
+
+Both programs can be executed under Linux operating system.
+However, camera trajectory-based method (3d) may need some
+pre-computation by MATLAB, and Zhang et al.'s ACTS software in
+
+  http://www.zjucvg.net/acts/acts.html
+
+
+
+
+Demo:
+To demo the feature trajectory-based method (2D), go into the 
+`2d/src/' folder, and types command 
+`sh run_script.sh csiegirl_short':
+
+  [root@home: ~/codes/2d/src]$ sh run_script.sh csiegirl_short
+
+The shell script will run the binary executable files in the 
+`2d/bin/', then the output video could be found at 
+`2d/out/csiegirl_short_l/' and `2d/out/csiegirl_short_r/'.
+
+To demo the camera trajectory-based method (3D), go into the
+`3d/src/' folder, and open MATLAB
+
+  [root@home: ~/codes/3d/src]$ MATLAB
+
+Run the MATLAB script `run_script.m' by typing following 
+
+  >> run_script('csiegirl')
+
+The output video frames could be found at
+`3d/out/csiegirl_l/' and `3d/out/csiegirl_r/'
+
+
+
+Program description:
+The prototype programs are not well written. You need some preprocessing
+before stabilizing your own stereoscopic videos. 
+For example, your stereo video, say `YOURVIDEO.AVI' have to do following:
+
+In 2D:
+1. It has to be separated into left and right image frames with name
+   `2d/dat/img/YOURVIDEO_l/YOURVIDEO_%04d_l.png' and
+   `2d/dat/img/YOURVIDEO_r/YOURVIDEO_%04d_r.png', where %04d refer to 
+   a 4 digit integer to represent the frame number of that image.
+
+In 3D:
+1. It have to be separated into left and right image frames with name
+   `3d/dat/img/YOURVIDEO_l/%04d.jpg' and
+   `3d/dat/img/YOURVIDEO_r/%04d.jpg', where %04d refer to 
+   a 4 digit integer to represent the frame number of that image.
+
+2. Make sure you have left and right `camera file' from ACTS with name
+   `3d/log/cameras/YOURVIDEO_l.cameras' and
+   `3d/log/cameras/YOURVIDEO_r.cameras'.
+
+3. Make sure you have left and right 'scene file' from ACTS with name
+   `3d/log/scenes/YOURVIDEO_l.scenes' and
+   `3d/log/scenes/YOURVIDEO_r.scenes'.
+
+After that, you can use the program to stabilize your videos.
+As demo procedure, just replace the input parameter from 
+`csiegirl' to `YOURVIDEO'.

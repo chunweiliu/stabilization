@@ -1,0 +1,10 @@
+run_script('csiegirl')
+%script_2d5_stabilize('children')
+%script_2d5_stabilize('csiegirl')
+%script_2d5_stabilize('redgirl')
+%script_2d5_stabilize('ntu')
+%script_2d5_stabilize('library')
+%script_2d5_stabilize('101')
+%script_2d5_stabilize('path')
+%script_2d5_stabilize('runner')
+%script_2d5_stabilize('r506') % ransac fail

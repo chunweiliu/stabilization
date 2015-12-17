@@ -1,0 +1,27 @@
+#!bin/bash
+sh script_stereo_stabilize.sh active1
+sh script_stereo_stabilize.sh active2
+sh script_stereo_stabilize.sh active3
+sh script_stereo_stabilize.sh azalea1
+sh script_stereo_stabilize.sh azalea2
+sh script_stereo_stabilize.sh bike_parallel
+sh script_stereo_stabilize.sh bird
+sh script_stereo_stabilize.sh buliding1
+sh script_stereo_stabilize.sh buliding2
+sh script_stereo_stabilize.sh children
+sh script_stereo_stabilize.sh csie_girl
+sh script_stereo_stabilize.sh csiegirl
+sh script_stereo_stabilize.sh elevator
+sh script_stereo_stabilize.sh flower1
+sh script_stereo_stabilize.sh fubell
+sh script_stereo_stabilize.sh historyroom
+sh script_stereo_stabilize.sh me_parallel
+sh script_stereo_stabilize.sh ntu_crowd_parallel
+sh script_stereo_stabilize.sh ntu_crowd_zoom
+sh script_stereo_stabilize.sh palmboul
+sh script_stereo_stabilize.sh room_parallel
+sh script_stereo_stabilize.sh sign
+sh script_stereo_stabilize.sh sinica1
+sh script_stereo_stabilize.sh sinica2
+sh script_stereo_stabilize.sh tree1
+sh script_stereo_stabilize.sh tree2

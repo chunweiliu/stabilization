@@ -1,0 +1,1 @@
+If you found that the program cannot run on your computer, perhaps it is because Microsoft Visual C++ 2005 SP1 has not been installed. Install vcredist_x86.exe should be able to address this problem.
